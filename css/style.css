@@ -71,7 +71,7 @@ body {
   }
   #liner::before {
     color: #FFFF00;
-    content: "rajanagori@about-me:~$";
+    content: "secretsanta@mynameis:~$";
   }
   #liner.password::before {
     content: "Password:";
