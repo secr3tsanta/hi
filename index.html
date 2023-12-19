@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-07YD4QT9YH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalistic Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #FF6F61, #FFD700);
+            color: #fff; /* Text color is set to white for better visibility on the gradient background */
+        }
 
-    gtag('config', 'G-07YD4QT9YH');
-  </script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="img/fav-icon.png">
+        #prompt {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
-
 <body>
-  <div id="terminal">
-    <a id="before"></a>
-  </div>
-  <div id="command" onclick="$('texter').focus();">
-    <textarea type="text" id="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
-                   moveIt(this.value.length, event)" onkeypress="typeIt(this, event);" autofocus=""></textarea>
-    <div id="liner">
-      <span id="typer"></span><b class="cursor" id="cursor">█</b>
-    </div>
-  </div>
-  <script src="js/caret.js"></script>
-  <script src="js/commands.js"></script>
-  <script src="js/main.js"></script>
 
+<p id="prompt">Click on this button:</p>
+<button onclick="redirectToGoogle()">Go to Google</button>
+
+<script>
+    function redirectToGoogle() {
+        window.location.href = "https://www.google.com/search?q=splunk+%2B+blackhat+%2B+arsenal+%2B+docker&sca_esv=591861726&source=hp&ei=_EyAZd3SDMDS2roP2-OxWA&iflsig=AO6bgOgAAAAAZYBbDClqoFFiFuNqO3TxKI_6jvolj8Lg&ved=0ahUKEwjdwM21j5mDAxVAqVYBHdtxDAsQ4dUDCAo&uact=5&oq=splunk+%2B+blackhat+%2B+arsenal+%2B+docker&gs_lp=Egdnd3Mtd2l6IiRzcGx1bmsgKyBibGFja2hhdCArIGFyc2VuYWwgKyBkb2NrZXIyBRAhGKABSIilAlDOCljpoQJwDHgAkAEEmAGkA6ABhFuqAQsyLjYuMjcuMTAuMbgBA8gBAPgBAfgBAqgCCsICEBAAGAMYjwEY5QIY6gIYjAPCAhAQLhgDGI8BGOUCGOoCGIwDwgILEAAYgAQYsQMYgwHCAg4QABiABBiKBRixAxiDAcICCxAuGIAEGLEDGIMBwgIREC4YgwEYxwEYsQMY0QMYgATCAhEQLhiABBiKBRixAxiDARjUAsICDhAuGIAEGIoFGLEDGIMBwgIREC4YgAQYsQMYgwEYxwEY0QPCAggQABiABBixA8ICDhAuGIAEGLEDGMcBGNEDwgIFEAAYgATCAgYQABgWGB7CAggQABgWGB4YCsICBhAAGB4YDcICBBAhGArCAgoQIRigARjDBBgKwgIIECEYoAEYwwTCAggQABiABBiiBMICBxAhGKABGAo&sclient=gws-wiz";
+    }
+</script>
 
 </body>
-
 </html>
